@@ -13,4 +13,27 @@ public class StockMain {
         [일반주] 종목: 스칼라 에듀 / 현재가: 15800원 / 의결권: 있음 / 배당우선권: 없음  
         [우선주] 종목: 스칼라 AI / 현재가: 18000원 / 배당률: 5.0% / 의결권: 없음 / 배당우선권: 있음
      */
-}
+
+    public static void main(String[] args) {
+        Stock commonStock = new CommonStock("스칼라 에듀", 15000);
+        PreferredStock preferredStock = new PreferredStock("스칼라 AI", 17500, 5.0);
+
+        System.out.println("[주식 정보]");
+        commonStock.printInfo();
+        preferredStock.printInfo();
+        System.out.println();
+
+        commonStock.setPrice(15800);
+        preferredStock.setPrice(18000);
+
+        System.out.println("스칼라 에듀 가격이 " + commonStock.getPrice() + "원으로 변경되었습니다.");
+        System.out.println("스칼라 AI 가격이 " + preferredStock.getPrice() + "원으로 변경되었습니다.");
+        System.out.println();
+
+        System.out.println("[가격 변경 후 주식 정보]");
+        commonStock.printInfo();
+        preferredStock.printInfo();
+    }
+}   
+
+

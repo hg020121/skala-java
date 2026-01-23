@@ -7,7 +7,7 @@ public class PreferredStock extends Stock {
     public PreferredStock(String name, double price, double dividendRate) {
         super(name, price);
         this.dividendRate = dividendRate;
-        this.hasVotingRights = false;
+        this.hasVotingRights = false; 
         this.hasDividendPriority = true;
     }
 
