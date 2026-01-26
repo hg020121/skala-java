@@ -27,5 +27,11 @@ public class CollectionsExample {
         stockList.add(new Stock("SKALA 테크", 9500));
 
         // Collections.sort() 사용하여 이름 기준 오름차순 정렬
+        Collections.sort(stockList, (s1, s2) -> s1.name.compareTo(s2.name));
+        // Collections.sort(stockList, Comparator.comparing(stock -> stock.name)); --- IGNORE ---
+        System.out.println("이름 기준 오름차순 정렬:");
+        for (Stock stock : stockList) {
+            stock.printInfo();
     }
-}
+    }
+}   

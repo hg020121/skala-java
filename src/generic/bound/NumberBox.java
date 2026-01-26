@@ -1,6 +1,6 @@
 package generic.bound;
 
-class NumberBox<T extends Number> {
+class NumberBox<T extends Number> { //상한값, 하한값 정의
 
     private T value;
 

@@ -11,6 +11,7 @@ public class LambdaSort {
         // 람다식으로 Comparator 구현
         stocks.sort((a, b) -> a.compareTo(b));
 
+        stocks.forEach(s -> System.out.println(s)); //일반적인 lambda expression
         stocks.forEach(System.out::println); // method reference
     }
 

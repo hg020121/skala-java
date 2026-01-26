@@ -1,6 +1,6 @@
 package generic.pair;
 
-public class Pair<K, V> {
+public class Pair<K, V> { //key는 문자열, value는 숫자열로 해서 하나의 stockPair를 만들어보자
 
     private final K key;
     private final V value;

@@ -16,9 +16,11 @@ public class PersonComparator {
 
         // 나이순으로 정렬하는 Comparator 생성
         Comparator<Person> byAge = (p1, p2) -> Integer.compare(p1.getAge(), p2.getAge());
+        Comparator<Person> byName = Comparator.comparing(Person::getName);
 
         // Comparator를 사용하여 리스트 정렬
         Collections.sort(people, byAge);
+        Collections.sort(people, byName);
 
         System.out.println(people); // 출력: [Bob (25), Alice (30), Charlie (35)]
 

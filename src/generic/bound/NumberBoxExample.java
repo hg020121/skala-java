@@ -12,6 +12,10 @@ public class NumberBoxExample {
         intBox.setValue(10);
         intBox.printDouble();
 
+        // //stringbox로 해보면
+        // NumberBox<String> stringBox = new NumberBox<>();
+        // //stringBox.setValue("Hello"); //컴파일 에러 발생, string은 number의 자식이 아니니까, 에러발생
+
         NumberBox<Double> doubleBox = new NumberBox<>();
         doubleBox.setValue(5.5);
         doubleBox.printDouble();

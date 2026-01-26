@@ -9,8 +9,8 @@ public class WildcardExample {
 
         // List<Animal>에는 Animal과 그 자손들(Dog, Cat) 모두 추가 가능
         List<Animal> animals = new ArrayList<>();
-        animals.add(new Dog());
-        animals.add(new Cat());
+        animals.add(new Dog()); //부모형태로 animals만들고 여기 개도, 고양이도 들어가기 가능
+        animals.add(new Cat()); //선언한 형태는 animal이지만 instance가 만들어질 때, 고양이와 개의 형태로 만들어짐
 
         for (Animal a : animals) {
             a.speak();  // OK
